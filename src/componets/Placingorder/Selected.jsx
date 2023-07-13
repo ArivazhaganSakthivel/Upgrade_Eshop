@@ -47,8 +47,9 @@ export default function Selected(props) {
             <Box width={300} height={200} p={3}>
               <Typography>Name:  {details.name}</Typography>
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                adjective
+            
               </Typography>
+              <hr/>
               <Typography>Qunitity: 1</Typography>
               <Typography>Price: {details.price}$</Typography>
               <Typography>{details.price}$ X 1</Typography>

@@ -123,11 +123,7 @@ export default function Mproduct() {
       }
       )
       setFilter(updatedList);
-    }
-       
-    }
-
-    
+    } }    
 
     return (
       <>

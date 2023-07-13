@@ -7,6 +7,7 @@ export default function Address(props) {
   const navigate = useNavigate();
   const [addressArray, setAddressArray] =useState([]);
   let [body, setBody] = useState({})
+  let[passingValue, setPassingValue] = useState();
 
   function working(e) {
 
@@ -61,7 +62,6 @@ let[refresh, setRefresh]=useState();
         // Handle the response data
         console.log(data);
         setAddressArray(data)
-
       })
       .catch(error => {
         // Handle any errors that occurred during the request
@@ -78,7 +78,9 @@ let[refresh, setRefresh]=useState();
 
   function chooseHandler(e){
      setPair(e.target.value);
-     setButtonIndigator(true)
+     //console.log(e.target.value);
+     setPassingValue(e.target.value);
+     setButtonIndigator(true);
   }
 
   let [buttonIndigator, setButtonIndigator] =  useState(false);
@@ -89,7 +91,7 @@ let[refresh, setRefresh]=useState();
       <Box display={'flex'}gap={10} p={3}>
       <Button onClick={() => { navigate(-1); props.goBack(); }} color="secondary" variant='contained'  >Back</Button>
       <Collapse in={buttonIndigator} >
-   <Button onClick={() => { navigate('/oderplace/review/123'); props.goNext(); }} color="secondary" variant='contained' >Next</Button>
+   <Button onClick={() => { navigate(`/oderplace/review/${passingValue}`); props.goNext(); }} color="secondary" variant='contained' >Next</Button>
    </Collapse>
    </Box>
       <Box height={400} p={3} gap={10} display={'flex'} flexDirection={'column'}>

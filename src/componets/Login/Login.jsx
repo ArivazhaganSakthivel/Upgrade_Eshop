@@ -82,7 +82,7 @@ function Login(props) {
             <Stack gap={2}>
               <Box display={'flex'} justifyContent={'center'}><Typography variant='h6'>Log In</Typography></Box>
               <Mytextbox id="outlined-basic" label="Email" name='email' type='email' variant="outlined" required />
-              <Mytextbox id="outlined-basic" label="Password" name='password' variant="outlined" required />
+              <Mytextbox id="outlined-basic" label="Password" name='password' variant="outlined" required type='password' />
               <Button variant='contained' type='submit'>  Submit</Button>
               <Box display={'flex'} justifyContent={'center'} gap={1}>
                 Are you a new user? <Mylink to='/signup'>Sign UP</Mylink></Box>
